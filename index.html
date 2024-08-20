@@ -36,6 +36,7 @@
         <select name="partido" id="partido">
             <option value=""></option>
         </select>
+        <button id="pesquisar"> Pesquisar </button>
         <input type="submit" value="Limpar" id="botao">
     </form>
 
@@ -60,7 +61,8 @@
             }
         });
 
-        $('#partido').change(function(){
+        $('#pesquisar').click(function(){
+            event.preventDefault();
             var idPartido = $('#partido').val();
 
             $.ajax({
